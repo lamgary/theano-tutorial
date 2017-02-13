@@ -225,7 +225,7 @@ class SdA(object):
             inputs=[index],
             outputs=self.finetune_cost,
             updates=updates,
-            gives={
+            givens={
                 self.x: train_set_x[
                     index * batch_size: (index + 1) * batch_size
                 ],
@@ -272,7 +272,7 @@ class SdA(object):
         def test_score():
             return [test_score_i(i) for i in range(n_test_batches)]
 
-        return train_fn, valid_score(), test_score()
+        return train_fn, valid_score, test_score
 
 def test_SdA(finetune_lr=0.1, pretraining_epochs=15,
              pretrain_lr=0.001, training_epochs=1000,
