@@ -1,2 +1,4 @@
 # theano-tutorial
-theano tutorial exercises from http://deeplearning.net/tutorial with minor refactoring to make it easy to understand
+Theano tutorial exercises from http://deeplearning.net/tutorial.
+
+I re-implemented the solutions with minor refactoring to aid my own understanding.
